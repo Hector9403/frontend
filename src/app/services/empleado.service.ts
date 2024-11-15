@@ -15,18 +15,19 @@ export class EmpleadoService {
     this.selectedEmpleado = new Empleado();
     this.empleado=[];
    }
-
+   //consultar
    getEmpleados(){
     return this.http.get(this.URL_API);
    }
+   //agregar
    postEmpleado(Empleado:Empleado){
    return this.http.post(this.URL_API, Empleado);
    }
-
+   //actualizar
    putEmpleado(Empleado:Empleado){
     return this.http.put(this.URL_API + `/${Empleado._id}`, Empleado);
    }
-
+   //eliminar
    deleteEmpleado(_id:string){
     return this.http.delete(this.URL_API + `/${_id}`,)
    }

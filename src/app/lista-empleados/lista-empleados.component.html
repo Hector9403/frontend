@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Lista de Empleados</h2>
+  
+    <table class="highlight">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Cargo</th>
+          <th>Lugar de Trabajo</th>
+          <th>Salario</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let empleado of empleados">
+          <td>{{ empleado._id }}</td>
+          <td>{{ empleado.name }}</td>
+          <td>{{ empleado.position }}</td>
+          <td>{{ empleado.office }}</td>
+          <td>{{ empleado.salary }}</td>
+          <td>
+            <!-- Botón para editar -->
+            <button class="btn blue" (click)="seleccionarEmpleado(empleado)">
+              <i class="material-icons">edit</i> Editar
+            </button>
+  
+            <!-- Botón para eliminar -->
+            <button class="btn red" (click)="eliminarEmpleado(empleado._id)">
+              <i class="material-icons">delete</i> Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Botón para volver a la página principal -->
+    <button routerLink="/" class="btn">Volver a Inicio</button>
+  </div>

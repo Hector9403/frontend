@@ -6,16 +6,21 @@ import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmpleadosComponent } from './components/empleados/empleados.component';
+import { ListaEmpleadosComponent } from './lista-empleados/lista-empleados.component';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmpleadosComponent
+    EmpleadosComponent,
+    ListaEmpleadosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RouterModule,
     HttpClientModule
   ],
   providers: [
